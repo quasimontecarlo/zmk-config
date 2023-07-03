@@ -2,12 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: quasimontecarlo
-      url-base: https://github.com/quasimontecarlo
   projects:
     - name: zmk
-      remote: quasimontecarlo
-      revision: choco
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
     path: config
