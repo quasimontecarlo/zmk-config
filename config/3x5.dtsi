@@ -19,22 +19,14 @@
 #define D_RT   LC(LG(RIGHT))
 #define TAB_RT LC(TAB)
 #define TAB_LT LC(LS(TAB))
-// spawn terminal
-#define DWM_TE LS(LG(RET))
-// close window
-#define DWM_CL LS(LG(C)
-// quit clean
-#define DWM_QT LS(LG(Q))
-// dmenu
-#define DWM_MN LG(P)
-// toggle current window floatv
-#define DWM_FL LS(LG(SPACE))
-// dwm utility / left shift + left gui
-#define GU_SH  LS(LG)
-// mac utility / control - option
-#define CT_AL  LC(LA)
-// mac utility / command - tab
-#define GU_TAB LG(TAB)
+#define DWM_TE LS(LG(RET))	// spawn terminal
+#define DWM_MN LG(P)		// spawn dmenu
+#define DWM_CL LS(LG(C)		// close window
+#define DWM_QT LS(LG(Q))	// clean quit dwm
+#define DWM_FL LS(LG(SPACE))	// toggle current window floaty
+#define GU_SH  LS(LG)		// dwm utility   / left shift + left gui
+#define CT_AL  LC(LA)		// mac utiltity / control + option
+#define GU_TAB LG(TAB)		// mac utility / command + tab
 
 
 // Key position groups
