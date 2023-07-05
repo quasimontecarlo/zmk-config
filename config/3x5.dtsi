@@ -18,23 +18,24 @@
 #define D_LT   LC(LG(LEFT))
 #define D_RT   LC(LG(RIGHT))
 #define TAB_RT LC(TAB)
-#define TAB_LT LC(LS(TAB))i
+#define TAB_LT LC(LS(TAB))
 // spawn terminal
 #define DWM_TE LS(LG(RET))
 // close window
 #define DWM_CL LS(LG(C)
-#define DWM_QT LS(LG(Q))
 // quit clean
-#define DWM_MN LG(P)
+#define DWM_QT LS(LG(Q))
 // dmenu
+#define DWM_MN LG(P)
+// toggle current window floatv
 #define DWM_FL LS(LG(SPACE))
-// toggle current window floaty
-#define GU_SH  LS(LG)
 // dwm utility / left shift + left gui
-#define CT_AL  LC(LA)
+#define GU_SH  LS(LG)
 // mac utility / control - option
-#define GU_TAB LG(TAB)
+#define CT_AL  LC(LA)
 // mac utility / command - tab
+#define GU_TAB LG(TAB)
+
 
 // Key position groups
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24
@@ -199,7 +200,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
  &mt LCTRL DWM_QT &mt LGUI DWM_CL &mt LALT DWM_MN &mt LSHFT DWM_TE &kp C_VOL_DN &kp HOME        &kp H         &kp J         &kp K         &kp L
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp DWM_FL    &kp CT_AL      &kp GU_TA    &kp LS(INS)   &kp C_PP          &kp INS       &kp DEL       &kp C_PREV    &kp C_NEXT    &kp PG_DN
+     &kp DWM_FL    &kp CT_AL      &kp GU_TAB   &kp LS(INS)   &kp C_PP          &kp INS       &kp DEL       &kp C_PREV    &kp C_NEXT    &kp PG_DN
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
                                  &kp LGUI      &kp LCTRL     &trans            &trans        &kp LSHFT     &kp RALT
