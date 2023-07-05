@@ -196,11 +196,11 @@
             label = "NAV";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp GU_SH     &kp TAB_LT    &kp TAB_RT    &kp LC(F4)    &kp C_VOL_UP        &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT     &kp PG_UP
+     &kp TAB_LT     &kp TAB_LT    &kp TAB_RT    &kp LC(F4)    &kp C_VOL_UP        &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT     &kp PG_UP
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp LCTRL      &kp LGUI       &kp LALT     &kp LSHFT     &kp C_VOL_DN        &kp HOME        &kp H         &kp J         &kp K         &kp L
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp DWM_FL    &kp CT_AL      &kp GU_TAB   &kp LS(INS)   &kp C_PP             &kp INS       &kp DEL       &kp C_PREV    &kp C_NEXT    &kp PG_DN
+     &kp TAB_LT    &kp TAB_LT     &kp TAB_LT   &kp LS(INS)   &kp C_PP             &kp INS       &kp DEL       &kp C_PREV    &kp C_NEXT    &kp PG_DN
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
                                  &kp LGUI      &kp LCTRL     &trans            &trans        &kp LSHFT     &kp RALT
