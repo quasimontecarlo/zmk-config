@@ -21,7 +21,7 @@
 #define TAB_LT LC(LS(TAB))
 #define DWM_TE LS(LG(RET))	// spawn terminal
 #define DWM_MN LG(P)		// spawn dmenu
-#define DWM_CL LS(LG(C)		// close window
+#define DWM_CL LS(LG(C))	// close window
 #define DWM_QT LS(LG(Q))	// clean quit dwm
 #define DWM_FL LS(LG(SPACE))	// toggle current window floaty
 #define GU_SH  LS(LGUI)		// dwm utility   / left shift + left gui
@@ -190,7 +190,7 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp GU_SH     &kp TAB_LT    &kp TAB_RT    &kp LC(F4)    &kp C_VOL_UP        &kp PG_UP     &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
- &mt LCTRL DWM_QT &kp LGUI       &kp LALT      &kp LSHFT     &kp C_VOL_DN  &kp HOME       &kp H         &kp J         &kp K         &kp L
+ &mt LCTRL DWM_QT &mt LGUI DWN_CL  &kp LALT      &kp LSHFT     &kp C_VOL_DN  &kp HOME       &kp H         &kp J         &kp K         &kp L
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp TAB_LT    &kp TAB_LT     &kp TAB_LT     &kp LS(INS)    &kp C_PP          &kp PG_DN      &kp DEL       &kp C_PREV    &kp C_NEXT    &kp INS
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
