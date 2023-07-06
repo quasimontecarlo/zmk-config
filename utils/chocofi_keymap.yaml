@@ -1,0 +1,225 @@
+layout: {qmk_keyboard: chocofi}
+layers:
+  DEF:
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ''''
+  - {t: A, h: LCTRL}
+  - {t: R, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: T, h: LSHFT}
+  - G
+  - M
+  - {t: N, h: RSHFT}
+  - {t: E, h: RALT}
+  - {t: I, h: RGUI}
+  - {t: O, h: RCTRL}
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - ','
+  - .
+  - /
+  - {t: TAB, h: LGUI}
+  - {t: ESC, h: LCTRL}
+  - {t: BSPC, h: NAV, s: TAB}
+  - {t: SPACE, h: SYM}
+  - {t: RET, h: RSHFT}
+  - {t: DEL, h: RALT}
+  QWE:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: LCTRL}
+  - {t: S, h: LGUI}
+  - {t: D, h: LALT}
+  - {t: F, h: LSHFT}
+  - G
+  - H
+  - {t: J, h: RSHFT}
+  - {t: K, h: RALT}
+  - {t: L, h: RGUI}
+  - {t: '''', h: RCTRL}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: TAB, h: LGUI}
+  - {t: ESC, h: LCTRL}
+  - {t: BSPC, h: NAV, s: TAB}
+  - {t: SPACE, h: SYM}
+  - {t: RET, h: RSHFT}
+  - {t: DEL, h: RALT}
+  GME: [TAB, Q, W, E, R, Y, U, I, O, P, ESC, A, S, D, F, H, J, K, L, GME, LSHFT, Z, X, C, V, N, M, ',', ., /, LCTRL, LALT, SPACE, NAV, RET, GME]
+  SYM:
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - \
+  - '7'
+  - '8'
+  - '9'
+  - ','
+  - {t: +, h: LCTRL}
+  - {t: '=', h: LGUI}
+  - {t: _, h: LALT}
+  - {t: '-', h: LSHIFT}
+  - ^
+  - '0'
+  - '4'
+  - '5'
+  - '6'
+  - .
+  - '`'
+  - ''
+  - '¿'
+  - '*'
+  - '&'
+  - ;
+  - '1'
+  - '2'
+  - '3'
+  - /
+  - LGUI
+  - SPACE
+  - {t: ▽, type: trans}
+  - {type: held}
+  - LSHFT
+  - RALT
+  NAV:
+  - DWM LSHIFT+LGUI
+  - TAB LEFT
+  - TAB RIGHT
+  - LC(F4)
+  - VOL UP
+  - PG UP
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - {t: DWM QUIT, h: LCTRL}
+  - {t: DWM CLOSE, h: LGUI}
+  - {t: DWM DMENU, h: LALT}
+  - {t: DWM TERM, h: LSHFT}
+  - VOL DN
+  - HOME
+  - H
+  - J
+  - K
+  - L
+  - DWM FLOAT_WIN
+  - MAC CTRL+OPTION
+  - MAC CMND+TAB
+  - LS(INS)
+  - PP
+  - PG DN
+  - DEL
+  - PREV
+  - NEXT
+  - INS
+  - LGUI
+  - LCTRL
+  - {type: held}
+  - {t: ▽, type: trans}
+  - LSHFT
+  - RALT
+  FUN:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - CAPS
+  - ''
+  - DEF
+  - QWE
+  - GME
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - BT 0
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - ''
+  - WIN DESK_LEFT
+  - WIN DESK_RIGHT
+  - F11
+  - F12
+  - OUT USB
+  - OUT BLE
+  - PSCRN
+  - PAUSE BREAK
+  - BT CLR
+  - '&bootloader'
+  - '&sys_reset'
+  - {type: held}
+  - {type: held}
+  - '&sys_reset'
+  - '&bootloader'
+combos:
+- p: [6, 7]
+  k: ;
+  l: [DEF, QWE]
+- p: [12, 13]
+  k: (
+  l: [DEF, QWE]
+- p: [16, 17]
+  k: )
+  l: [DEF, QWE]
+- p: [11, 12]
+  k: '['
+  l: [DEF, QWE]
+- p: [17, 18]
+  k: ']'
+  l: [DEF, QWE]
+- p: [11, 13]
+  k: TAB
+  l: [DEF, QWE]
+- p: [16, 18]
+  k: BSPC
+  l: [DEF, QWE]
+- p: [22, 23]
+  k: '`'
+  l: [DEF, QWE]
+- p: [21, 22]
+  k: '~'
+  l: [DEF, QWE]
+- p: [26, 27]
+  k: \
+  l: [DEF, QWE]
+- p: [27, 28]
+  k: '|'
+  l: [DEF, QWE]
+- p: [13, 16]
+  k: '&caps_word'
+  l: [DEF, QWE]

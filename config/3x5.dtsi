@@ -1,0 +1,267 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#ifdef EXTERNAL_POWER
+#    include <dt-bindings/zmk/ext_power.h>
+#endif
+
+// Layer aliases
+#define DEF 0
+#define QWE 1
+#define GME 2
+#define SYM 3
+#define NAV 4
+#define FUN 5
+
+// Desktop and tab navigation shortcuts
+#define D_LT   LC(LG(LEFT))
+#define D_RT   LC(LG(RIGHT))
+#define TAB_RT LC(TAB)
+#define TAB_LT LC(LS(TAB))
+#define DWM_TE LS(LG(RET))	// spawn terminal
+#define DWM_MN LG(P)		// spawn dmenu
+#define DWM_CL LS(LG(C))	// close window
+#define DWM_QT LS(LG(Q))	// clean quit dwm
+#define DWM_FL LS(LG(SPACE))	// toggle current window floaty
+#define GU_SH  LS(LGUI)		// dwm utility   / left shift + left gui
+#define CT_AL  LC(LALT)		// mac utiltity / control + option
+#define GU_TAB LG(TAB)		// mac utility / command + tab
+
+
+// Key position groups
+#define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24
+#define KEYS_R 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29
+#ifdef THREE_THUMBS
+#    define THUMBS 30 31 32 33 34 35 
+#else
+#    define THUMBS 30 31 32 33
+#endif
+
+#include "combos.dtsi"
+
+&mt {
+    flavor = "hold-preferred";
+    tapping-term-ms = <150>;
+};
+
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <150>;
+};
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BSPC DEL N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
+};
+
+/ {
+    behaviors {
+        aml: alpha_mods_l {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALPHA_MT_L";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <150>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+            global-quick-tap;
+        };
+        asl: alpha_shift_l {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALPHA_SFT_L";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+        amr: alpha_mods_r {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALPHA_MT_R";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <150>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+            global-quick-tap;
+        };
+        asr: alpha_shift_r {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALPHA_SFT_R";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        // Easy alt-tab with alt+backspace thumb using mod-morphs
+        bstab: backspace_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BSPC_TAB";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp TAB>;
+            mods = <MOD_LALT>;
+            keep-mods = <MOD_LALT>;
+        };
+        lt_bspc: layer_tap_backspace_tab {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_BT";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "balanced";
+            bindings = <&mo>, <&bstab>;
+        };
+    };
+
+    cond_layers {
+        compatible = "zmk,conditional-layers";
+        // Define FUN layer as tri-state
+        func_tristate {
+            if-layers = <NAV SYM>;
+            then-layer = <FUN>;
+        };
+    };
+
+    macros {
+        ZMK_MACRO(inv_qm,
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N8>
+                , <&macro_release &kp LALT>;
+        )
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            label = "DEF";
+            bindings = <
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+     &kp Q         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &aml LCTRL A  &aml LGUI R   &aml LALT S   &asl LSHFT T  &kp G             &kp M         &asr RSHFT N  &amr RALT E   &amr RGUI I   &amr RCTRL O
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH
+// ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+#ifdef THREE_THUMBS
+                                 &mt LGUI TAB  &mt LCTRL ESC &lt_bspc NAV 0    &lt SYM SPACE &mt RSHFT RET &mt RALT DEL
+#else
+                                               &mt LCTRL ESC &lt_bspc NAV 0    &lt SYM SPACE &mt RSHFT RET
+#endif
+//                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
+            >;
+        };
+
+
+        qwerty_layer {
+            label = "QWE";
+            bindings = <
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+     &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &aml LCTRL A  &aml LGUI S   &aml LALT D   &asl LSHFT F  &kp G             &kp H         &asr RSHFT J  &amr RALT K   &amr RGUI L   &amr RCTRL SQT
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH
+// ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+#ifdef THREE_THUMBS
+                                 &mt LGUI TAB  &mt LCTRL ESC &lt_bspc NAV 0    &lt SYM SPACE &mt RSHFT RET &mt RALT DEL
+#else
+                                               &mt LCTRL ESC &lt_bspc NAV 0    &lt SYM SPACE &mt RSHFT RET
+#endif
+//                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
+            >;
+        };
+
+        game_layer {
+            label = "GME";
+            bindings = <
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+     &kp TAB       &kp Q         &kp W         &kp E         &kp R             &kp Y         &kp U         &kp I         &kp O         &kp P
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &kp ESC       &kp A         &kp S         &kp D         &kp F             &kp H         &kp J         &kp K         &kp L         &tog GME
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &kp LSHFT     &kp Z         &kp X         &kp C         &kp V             &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH
+// ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+#ifdef THREE_THUMBS
+                                 &kp LCTRL     &kp LALT      &kp SPACE         &mo NAV       &kp RET       &tog GME
+#else
+                                               &kp LALT      &kp SPACE         &mo NAV       &kp RET
+#endif
+//                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
+            >;
+        };
+
+        symbol_layer {
+            label = "SYM";
+            bindings = <
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+     &kp EXCL        &kp AT        &kp HASH      &kp DLLR      &kp PRCNT         &kp BSLH      &kp N7        &kp N8        &kp N9        &kp COMMA
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+ &aml LCTRL PLUS &aml LGUI EQUAL &aml LALT UNDER &asl LSHIFT MINUS &kp CARET     &kp N0        &kp N4        &kp N5        &kp N6        &kp DOT
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &kp GRAVE       &none         &inv_qm       &kp STAR      &kp AMPS          &kp SEMI      &kp N1        &kp N2        &kp N3        &kp SLASH
+// ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+#ifdef THREE_THUMBS
+                                 &kp LGUI      &kp SPACE     &trans            &trans        &kp LSHFT     &kp RALT
+#else
+                                               &kp SPACE     &trans            &trans        &kp LSHFT
+#endif
+//                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
+            >;
+        };
+
+        nav_layer {
+            label = "NAV";
+            bindings = <
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+     &kp GU_SH     &kp TAB_LT    &kp TAB_RT    &kp LC(F4)    &kp C_VOL_UP        &kp PG_UP     &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+ &aml LCTRL DWM_QT &aml LGUI DWM_CL &aml LALT DWM_MN &asl LSHFT DWM_TE &kp C_VOL_DN  &kp HOME       &kp H         &kp J         &kp K         &kp L
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &kp DWM_FL    &kp CT_AL    &kp GU_TAB     &kp LS(INS)    &kp C_PP          &kp PG_DN      &kp DEL       &kp C_PREV    &kp C_NEXT    &kp INS
+// ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+#ifdef THREE_THUMBS
+                                 &kp LGUI      &kp LCTRL     &trans            &trans        &kp LSHFT     &kp RALT
+#else
+                                               &kp LCTRL     &trans            &trans        &kp LSHFT
+#endif
+//                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
+            >;
+        };
+
+        function_layer {
+            label = "FUN";
+            bindings = <
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp CAPS      &none         &to DEF         &to QWE       &to GME 
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+     &kp F6        &kp F7        &kp F8        &kp F9        &kp F10           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+#ifdef EXTERNAL_POWER
+     &none         &kp D_LT      &kp D_RT      &kp F11       &kp F12           &out OUT_USB  &out OUT_BLE &ext_power EP_ON &ext_power EP_OFF &bt BT_CLR
+#else
+     &none         &kp D_LT      &kp D_RT      &kp F11       &kp F12           &out OUT_USB  &out OUT_BLE  &kp PSCRN    &kp PAUSE_BREAK &bt BT_CLR
+#endif
+// ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+#ifdef THREE_THUMBS
+                                 &bootloader   &sys_reset    &trans            &trans        &sys_reset    &bootloader
+#else
+                                               &sys_reset    &trans            &trans        &sys_reset
+#endif
+//                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
+            >;
+        };
+    };
+};
