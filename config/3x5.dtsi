@@ -8,11 +8,9 @@
 
 // Layer aliases
 #define DEF 0
-#define QWE 1
-#define GME 2
-#define SYM 3
-#define NAV 4
-#define FUN 5
+#define SYM 1
+#define NAV 2
+#define FUN 3
 
 // Desktop and tab navigation shortcuts
 #define D_LT   LC(LG(LEFT))
