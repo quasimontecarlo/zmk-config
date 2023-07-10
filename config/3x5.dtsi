@@ -17,14 +17,20 @@
 #define D_RT   LC(LG(RIGHT))
 #define TAB_RT LC(TAB)
 #define TAB_LT LC(LS(TAB))
-#define DWM_TE LS(LG(RET))	// spawn terminal
-#define DWM_MN LG(P)		// spawn dmenu
-#define DWM_CL LS(LG(C))	// close window
-#define DWM_QT LS(LG(Q))	// clean quit dwm
+#define DWM_TE LS(LG(RET))	    // spawn terminal
+#define DWM_MN LG(P)		    // spawn dmenu
+#define DWM_CL LS(LG(C))	    // close window
+#define DWM_QT LS(LG(Q))	    // clean quit dwm
 #define DWM_FL LS(LG(SPACE))	// toggle current window floaty
-#define GU_SH  LS(LGUI)		// dwm utility   / left shift + left gui
-#define CT_AL  LC(LALT)		// mac utiltity / control + option
-#define GU_TAB LG(TAB)		// mac utility / command + tab
+#define GU_SH  LS(LGUI)		    // dwm utility   / left shift + left gui
+#define CT_AL  LC(LALT)		    // mac utiltity / control + option
+#define GU_TAB LG(TAB)		    // mac utility / command + tab
+#define MAC_MX LC(LA(M))        // mac utility / maximize
+#define MAC_FS LC(LA(RET))      // mac utility / full screen
+#define SH_CT  LS(LCTRL)        // utility / shift + control
+#define COPY   LC(C)            // utility / ctrl + C
+#define PASTE  LC(V)            // utility / ctrl + V
+
 
 
 // Key position groups
@@ -154,9 +160,9 @@
      &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                 &mt LGUI TAB  &mt LCTRL ESC &lt_bspc NAV 0    &lt SYM SPACE &mt RSHFT RET &mt RALT DEL
+                                &mt LGUI TAB &lt_bspc SH_CT 0 &mt NAV ESC      &lt SYM RET   &mt COPY SPACE &mt PASTE DEL
 #else
-                                               &mt LCTRL ESC &lt_bspc NAV 0    &lt SYM SPACE &mt RSHFT RET
+                                             &lt_bspc SH_CT 0 &mt NAV ESC      &lt SYM RET   &mt COPY SPACE
 #endif
 //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
@@ -187,7 +193,7 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp GU_SH     &kp TAB_LT    &kp TAB_RT    &kp LC(F4)    &kp C_VOL_UP        &kp PG_UP     &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
- &aml LCTRL DWM_QT &aml LGUI DWM_CL &aml LALT DWM_MN &asl LSHFT DWM_TE &kp C_VOL_DN  &kp HOME       &kp H         &kp J         &kp K         &kp L
+ &aml LCTRL DWM_QT &aml LGUI DWM_CL &aml LALT DWM_MN &asl LSHFT DWM_TE &kp C_VOL_DN &kp HOME   &kp H         &kp J          &kp K         &kp L
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp DWM_FL    &kp CT_AL    &kp GU_TAB     &kp LS(INS)    &kp C_PP          &kp PG_DN      &kp DEL       &kp C_PREV    &kp C_NEXT    &kp INS
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
