@@ -198,7 +198,7 @@
      &kp DWM_FL      &kp CT_AL  &mt MAC_FS MAC_MX &kp DEL    &kp LS(INS)        &kp PG_DN       &kp W       &kp TAB_LT    &kp TAB_RT     &kp TAB
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                 &kt LGUI      &kp LCTRL     &trans            &trans        &kp LSHFT     &kp RALT
+                                 &kp LALT      &kp LCTRL     &trans            &trans        &kp LSHFT     &kt LGUI
 #else
                                                &kp LCTRL     &trans            &trans        &kp LSHFT
 #endif
