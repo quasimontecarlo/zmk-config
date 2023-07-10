@@ -195,7 +195,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
  &aml LCTRL DWM_QT &aml LGUI DWM_CL &aml LALT DWM_MN &asl LSHFT DWM_TE &kp C_MUTE &kp HOME      &kp H         &kp J          &kp K        &kp L
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp DWM_FL      &kp CT_AL    &mt MAC_FL MAC_MX &kp DEL   &kp LS(INS)       &kp PG_DN       &kp W       &kp TAB_LT    &kp TAB_RT     &kp TAB
+     &kp DWM_FL      &kp CT_AL  &mt MAC_FS MAC_MX &kp DEL    &kp LS(INS)        &kp PG_DN       &kp W       &kp TAB_LT    &kp TAB_RT     &kp TAB
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
                                  &kt LGUI      &kp LCTRL     &trans            &trans        &kp LSHFT     &kp RALT
