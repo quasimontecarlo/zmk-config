@@ -160,9 +160,9 @@
      &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                &mt LGUI TAB &lt_bspc A B &mt NAV ESC      &lt SYM RET   &mt RSHIFT SPACE &mt RALT DEL
+                                &mt COPY TAB &mt PASTE BSPC &mt NAV ESC      &lt SYM RET   &mt RSHIFT SPACE &mt RALT DEL
 #else
-                                             &lt_bspc A B &mt NAV ESC      &lt SYM RET   &mt RSHIFT SPACE
+                                             &lt_bspc PASTE BSPC &mt NAV ESC      &lt SYM RET   &mt RSHIFT SPACE
 #endif
 //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
