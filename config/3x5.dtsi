@@ -153,16 +153,16 @@
             label = "DEF";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp Q         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
+     &kp Q         &kp W         &kp F         &kp P           &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &aml LCTRL A  &aml LGUI R   &aml LALT S   &asl LSHFT T  &kp G             &kp M         &asr RSHFT N  &amr RALT E   &amr RGUI I   &amr RCTRL O
+     &aml LCTRL A  &aml LGUI R   &aml LALT S   &asl LSHFT T    &kp G             &kp M         &asr RSHFT N  &amr RALT E   &amr RGUI I   &amr RCTRL O
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH
+     &kp Z         &kp X         &kp C         &kp D           &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                               &mt SH_GU TAB &mt BSPC BSPC &mt NAV ESC      &lt SYM RET   &mt RSHIFT SPACE &mt RALT DEL
+                               &mt SH_GU TAB &mt BSPC BSPC   &lt NAV ESC      &lt SYM RET   &mt RSHIFT SPACE &mt RALT DEL
 #else
-                                             &mt BSPC BSPC &mt NAV ESC      &lt SYM RET   &mt RSHIFT SPACE
+                                             &mt BSPC BSPC   &lt NAV ESC      &lt SYM RET   &mt RSHIFT SPACE
 #endif
 //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
