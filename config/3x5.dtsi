@@ -17,14 +17,20 @@
 #define D_RT   LC(LG(RIGHT))
 #define TAB_RT LC(TAB)
 #define TAB_LT LC(LS(TAB))
-#define DWM_TE LS(LG(RET))	// spawn terminal
-#define DWM_MN LG(P)		// spawn dmenu
-#define DWM_CL LS(LG(C))	// close window
-#define DWM_QT LS(LG(Q))	// clean quit dwm
+#define DWM_TE LS(LG(RET))	    // spawn terminal
+#define DWM_MN LG(P)		    // spawn dmenu
+#define DWM_CL LS(LG(C))	    // close window
+#define DWM_QT LS(LG(Q))	    // clean quit dwm
 #define DWM_FL LS(LG(SPACE))	// toggle current window floaty
-#define GU_SH  LS(LGUI)		// dwm utility   / left shift + left gui
-#define CT_AL  LC(LALT)		// mac utiltity / control + option
-#define GU_TAB LG(TAB)		// mac utility / command + tab
+#define SH_GU  LS(LGUI)		    // dwm utility   / left shift + left gui
+#define CT_AL  LC(LALT)		    // mac utiltity / control + option
+#define GU_TAB LG(TAB)		    // mac utility / command + tab
+#define MAC_MX LC(LA(M))        // mac utility / maximize
+#define MAC_FS LC(LA(RET))      // mac utility / full screen
+#define SH_CT  LS(LCTRL)        // utility / shift + control
+#define COPY   LC(C)            // utility / ctrl + C
+#define PASTE  LC(V)            // utility / ctrl + V
+
 
 
 // Key position groups
@@ -147,16 +153,16 @@
             label = "DEF";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp Q         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
+     &kp Q         &kp W         &kp F         &kp P           &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &aml LCTRL A  &aml LGUI R   &aml LALT S   &asl LSHFT T  &kp G             &kp M         &asr RSHFT N  &amr RALT E   &amr RGUI I   &amr RCTRL O
+     &aml LCTRL A  &aml LGUI R   &aml LALT S   &asl LSHFT T    &kp G             &kp M         &asr RSHFT N  &amr RALT E   &amr RGUI I   &amr RCTRL O
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH
+     &kp Z         &kp X         &kp C         &kp D           &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                 &mt LGUI TAB  &mt LCTRL ESC &lt_bspc NAV 0    &lt SYM SPACE &mt RSHFT RET &mt RALT DEL
+                               &mt SH_GU TAB &mt BSPC BSPC   &lt NAV ESC      &lt SYM RET   &mt RSHIFT SPACE &mt RALT DEL
 #else
-                                               &mt LCTRL ESC &lt_bspc NAV 0    &lt SYM SPACE &mt RSHFT RET
+                                             &mt BSPC BSPC   &lt NAV ESC      &lt SYM RET   &mt RSHIFT SPACE
 #endif
 //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
@@ -185,14 +191,14 @@
             label = "NAV";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp GU_SH     &kp TAB_LT    &kp TAB_RT    &kp LC(F4)    &kp C_VOL_UP        &kp PG_UP     &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT
+      &kp C_PREV     &kp C_PP     &kp C_NEXT   &kp C_VOL_DN &kp C_VOL_UP        &kp PG_UP     &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
- &aml LCTRL DWM_QT &aml LGUI DWM_CL &aml LALT DWM_MN &asl LSHFT DWM_TE &kp C_VOL_DN  &kp HOME       &kp H         &kp J         &kp K         &kp L
+ &aml LCTRL DWM_QT &aml LGUI DWM_CL &aml LALT DWM_MN &asl LSHFT DWM_TE &kp C_MUTE &kp HOME      &kp H         &kp J          &kp K        &kp L
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp DWM_FL    &kp CT_AL    &kp GU_TAB     &kp LS(INS)    &kp C_PP          &kp PG_DN      &kp DEL       &kp C_PREV    &kp C_NEXT    &kp INS
+     &kp DWM_FL      &kp CT_AL  &mt MAC_FS MAC_MX &kp DEL    &kp LS(INS)        &kp PG_DN       &kp W       &kp TAB_LT    &kp TAB_RT     &kp TAB
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                 &kp LGUI      &kp LCTRL     &trans            &trans        &kp LSHFT     &kp RALT
+                                 &kp LALT      &kp LCTRL     &trans            &trans        &kp LSHFT     &kp LGUI
 #else
                                                &kp LCTRL     &trans            &trans        &kp LSHFT
 #endif
