@@ -1,153 +1,98 @@
+# FILL IN below field with a value like {qmk_keyboard: ferris/sweep}
+# or {ortho_layout: {split: true, rows: 3, columns: 5, thumbs: 2}}
+# see https://github.com/caksoylar/keymap-drawer/blob/main/KEYMAP_SPEC.md#layout
 layout: {qmk_keyboard: chocofi}
 layers:
   DEF:
-  - Q
-  - W
-  - F
-  - P
-  - B
-  - J
-  - L
-  - U
-  - Y
-  - ''''
-  - {t: A, h: LCTRL}
-  - {t: R, h: LGUI}
-  - {t: S, h: LALT}
-  - {t: T, h: LSHFT}
-  - G
-  - M
-  - {t: N, h: RSHFT}
-  - {t: E, h: RALT}
-  - {t: I, h: RGUI}
-  - {t: O, h: RCTRL}
-  - Z
-  - X
-  - C
-  - D
-  - V
-  - K
-  - H
-  - ','
-  - .
-  - /
-  - {t: TAB, h: LGUI}
-  - {t: ESC, h: LCTRL}
-  - {t: BSPC, h: NAV, s: TAB}
-  - {t: SPACE, h: SYM}
-  - {t: RET, h: RSHFT}
-  - {t: DEL, h: RALT}
+  - [Q, W, F]
+  - [P, B, J]
+  - [L, U, Y]
+  - - ''''
+    - {t: A, h: LCTRL}
+    - {t: R, h: LGUI}
+  - - {t: S, h: LALT}
+    - {t: T, h: LSHFT}
+    - G
+  - - M
+    - {t: N, h: RSHFT}
+    - {t: E, h: RALT}
+  - - {t: I, h: RGUI}
+    - {t: O, h: RCTRL}
+    - Z
+  - [X, C, D]
+  - [V, K, H]
+  - [',', ., /]
+  - - {t: TAB, h: LS(LGUI)}
+    - {t: BSPC, h: BSPC}
+    - {t: ESC, h: NAV}
+  - - {t: RET, h: SYM}
+    - {t: SPACE, h: RSHIFT}
+    - {t: DEL, h: RALT}
   SYM:
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - \
-  - '7'
-  - '8'
-  - '9'
-  - ','
-  - {t: +, h: LCTRL}
-  - {t: '=', h: LGUI}
-  - {t: _, h: LALT}
-  - {t: '-', h: LSHIFT}
-  - ^
-  - '0'
-  - '4'
-  - '5'
-  - '6'
-  - .
-  - '`'
-  - ''
-  - '¿'
-  - '*'
-  - '&'
-  - ;
-  - '1'
-  - '2'
-  - '3'
-  - /
-  - LGUI
-  - SPACE
-  - {t: ▽, type: trans}
-  - {type: held}
-  - LSHFT
-  - RALT
+  - ['!', '@', '#']
+  - [$, '%', \]
+  - ['7', '8', '9']
+  - - ','
+    - {t: +, h: LCTRL}
+    - {t: '=', h: LGUI}
+  - - {t: _, h: LALT}
+    - {t: '-', h: LSHIFT}
+    - ^
+  - ['0', '4', '5']
+  - ['6', ., '`']
+  - ['', '¿', '*']
+  - ['&', ;, '1']
+  - ['2', '3', /]
+  - - LGUI
+    - SPACE
+    - {t: ▽, type: trans}
+  - - {type: held}
+    - LSHFT
+    - RALT
   NAV:
-  - DWM LSHIFT+LGUI
-  - TAB LEFT
-  - TAB RIGHT
-  - LC(F4)
-  - VOL UP
-  - PG UP
-  - LEFT
-  - DOWN
-  - UP
-  - RIGHT
-  - {t: DWM QUIT, h: LCTRL}
-  - {t: DWM CLOSE, h: LGUI}
-  - {t: DWM DMENU, h: LALT}
-  - {t: DWM TERM, h: LSHFT}
-  - VOL DN
-  - HOME
-  - H
-  - J
-  - K
-  - L
-  - DWM FLOAT_WIN
-  - MAC CTRL+OPTION
-  - MAC CMND+TAB
-  - LS(INS)
-  - PP
-  - PG DN
-  - DEL
-  - PREV
-  - NEXT
-  - INS
-  - LGUI
-  - LCTRL
-  - {type: held}
-  - {t: ▽, type: trans}
-  - LSHFT
-  - RALT
+  - [PREV, PP, NEXT]
+  - [VOL DN, VOL UP, PG UP]
+  - [LEFT, DOWN, UP]
+  - - RIGHT
+    - {t: DWM QUIT, h: LCTRL}
+    - {t: DWM CLOSE, h: LGUI}
+  - - {t: DWM DMENU, h: LALT}
+    - {t: DWM TERMINAL, h: LSHFT}
+    - MUTE
+  - [HOME, H, J]
+  - [K, L, DWM FLOAT_WIN]
+  - - MAC CTRL+OPT
+    - {t: MAC RES_BIG, h: RES_FULL}
+    - DEL
+  - [LS(INS), PG DN, W]
+  - [TAB LEFT, TAB RIGHT, TAB]
+  - - LALT
+    - LCTRL
+    - {type: held}
+  - - {t: ▽, type: trans}
+    - LSHFT
+    - LGUI
   FUN:
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - CAPS
-  - ''
-  - ''
-  - ''
-  - ''
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - BT 0
-  - BT 1
-  - BT 2
-  - BT 3
-  - BT 4
-  - ''
-  - WIN DESK_LEFT
-  - WIN DESK_RIGHT
-  - F11
-  - F12
-  - OUT USB
-  - OUT BLE
-  - PSCRN
-  - PAUSE BREAK
-  - BT CLR
-  - '&bootloader'
-  - '&sys_reset'
-  - {type: held}
-  - {type: held}
-  - '&sys_reset'
-  - '&bootloader'
+  - [F1, F2, F3]
+  - [F4, F5, CAPS]
+  - ['', '', '']
+  - ['', F6, F7]
+  - [F8, F9, F10]
+  - - {t: BT, h: '0'}
+    - {t: BT, h: '1'}
+    - {t: BT, h: '2'}
+  - - {t: BT, h: '3'}
+    - {t: BT, h: '4'}
+    - ''
+  - [WIN DESK_LEFT, WIN DESK_RIGHT, F11]
+  - [F12, OUT USB, OUT BLE]
+  - [PSCRN, PAUSE BREAK, BT CLR]
+  - - '&bootloader'
+    - '&sys_reset'
+    - {type: held}
+  - - {type: held}
+    - '&sys_reset'
+    - '&bootloader'
 combos:
 - p: [6, 7]
   k: ;
@@ -183,5 +128,5 @@ combos:
   k: '|'
   l: [DEF]
 - p: [13, 16]
-  k: 'CAPS_LOCK'
+  k: '&caps_word'
   l: [DEF]

@@ -31,7 +31,8 @@ rect.held, rect.combo.held {
 
 /* color accent for ghost (optional) keys */
 rect.ghost, rect.combo.ghost {
-    fill: #ddd;
+    stroke-dasharray: 4, 4;
+    stroke-width: 2;
 }
 
 text {
@@ -164,27 +165,26 @@ path.combo {
 <text x="787.652" y="255.304" class="tap">/</text>
 <rect rx="6.0" ry="6.0" x="190.42400000000004" y="257.584" width="55.303999999999995" height="52.0" class="key"/>
 <text x="218.07600000000002" y="283.584" class="tap">TAB</text>
-<text x="218.07600000000002" y="307.584" class="hold">LGUI</text>
+<text x="218.07600000000002" y="307.584" class="hold" style="font-size: 88%">LS(LGUI)</text>
 <g transform="rotate(15.0, 284.15695407686394, 292.0887530667371)">
 <rect rx="6.0" ry="6.0" x="256.50495407686395" y="266.0887530667371" width="55.303999999999995" height="52.0" class="key"/>
-<text x="284.15695407686394" y="292.0887530667371" class="tap">ESC</text>
-<text x="284.15695407686394" y="316.0887530667371" class="hold">LCTRL</text>
+<text x="284.15695407686394" y="292.0887530667371" class="tap">BSPC</text>
+<text x="284.15695407686394" y="316.0887530667371" class="hold">BSPC</text>
 </g>
 <g transform="rotate(30.0, 350.59357474425406, 301.868)">
 <rect rx="6.0" ry="6.0" x="324.59357474425406" y="259.404" width="52.0" height="84.928" class="key"/>
-<text x="350.59357474425406" y="301.868" class="tap">BSPC</text>
+<text x="350.59357474425406" y="301.868" class="tap">ESC</text>
 <text x="350.59357474425406" y="342.332" class="hold">NAV</text>
-<text x="350.59357474425406" y="261.404" class="shifted">TAB</text>
 </g>
 <g transform="rotate(-30.0, 493.40642525574594, 301.868)">
 <rect rx="6.0" ry="6.0" x="467.40642525574594" y="259.404" width="52.0" height="84.928" class="key"/>
-<text x="493.40642525574594" y="301.868" class="tap">SPACE</text>
+<text x="493.40642525574594" y="301.868" class="tap">RET</text>
 <text x="493.40642525574594" y="342.332" class="hold">SYM</text>
 </g>
 <g transform="rotate(-15.0, 563.0344648531952, 291.23361494171843)">
 <rect rx="6.0" ry="6.0" x="535.3824648531952" y="265.23361494171843" width="55.303999999999995" height="52.0" class="key"/>
-<text x="563.0344648531952" y="291.23361494171843" class="tap">RET</text>
-<text x="563.0344648531952" y="315.23361494171843" class="hold">RSHFT</text>
+<text x="563.0344648531952" y="291.23361494171843" class="tap">SPACE</text>
+<text x="563.0344648531952" y="315.23361494171843" class="hold">RSHIFT</text>
 </g>
 <rect rx="6.0" ry="6.0" x="601.5759999999999" y="257.584" width="55.303999999999995" height="52.0" class="key"/>
 <text x="629.228" y="283.584" class="tap">DEL</text>
@@ -218,7 +218,7 @@ path.combo {
 <path d="M423.65200000000004,161.784 l-166.32000000000002,0.0" class="combo"/>
 <path d="M423.65200000000004,161.784 l166.31999999999996,0.0" class="combo"/>
 <rect rx="6.0" ry="6.0" x="409.65200000000004" y="148.784" width="28.0" height="26.0" class="combo"/>
-<text x="423.65200000000004" y="161.784" class="combo tap" style="font-size: 78%">CAPS_LOCK</text>
+<text x="423.65200000000004" y="161.784" class="combo tap" style="font-size: 70%">&amp;caps_word</text>
 </g>
 <g class="layer-SYM">
 <text x="30.0" y="382.37495355387125" class="label">SYM:</text>
@@ -308,16 +308,14 @@ path.combo {
 <g class="layer-NAV">
 <text x="30.0" y="736.7499071077425" class="label">NAV:</text>
 <rect rx="6.0" ry="6.0" x="32.0" y="826.0539071077425" width="55.303999999999995" height="52.0" class="key"/>
-<text x="59.652" y="852.0539071077425" class="tap" style="font-size: 64%">
-<tspan x="59.652" dy="-0.6em">DWM</tspan><tspan x="59.652" dy="1.2em">LSHIFT+LGUI</tspan></text>
+<text x="59.652" y="852.0539071077425" class="tap">PREV</text>
 <rect rx="6.0" ry="6.0" x="91.30399999999999" y="786.5179071077425" width="55.303999999999995" height="52.0" class="key"/>
-<text x="118.95599999999999" y="812.5179071077425" class="tap">
-<tspan x="118.95599999999999" dy="-0.6em">TAB</tspan><tspan x="118.95599999999999" dy="1.2em">LEFT</tspan></text>
+<text x="118.95599999999999" y="812.5179071077425" class="tap">PP</text>
 <rect rx="6.0" ry="6.0" x="150.608" y="766.7499071077425" width="55.303999999999995" height="52.0" class="key"/>
-<text x="178.26" y="792.7499071077425" class="tap">
-<tspan x="178.26" dy="-0.6em">TAB</tspan><tspan x="178.26" dy="1.2em">RIGHT</tspan></text>
+<text x="178.26" y="792.7499071077425" class="tap">NEXT</text>
 <rect rx="6.0" ry="6.0" x="209.91200000000003" y="788.5339071077425" width="55.303999999999995" height="52.0" class="key"/>
-<text x="237.56400000000002" y="814.5339071077425" class="tap">LC(F4)</text>
+<text x="237.56400000000002" y="814.5339071077425" class="tap">
+<tspan x="237.56400000000002" dy="-0.6em">VOL</tspan><tspan x="237.56400000000002" dy="1.2em">DN</tspan></text>
 <rect rx="6.0" ry="6.0" x="269.21599999999995" y="796.3739071077425" width="55.303999999999995" height="52.0" class="key"/>
 <text x="296.86799999999994" y="822.3739071077425" class="tap">
 <tspan x="296.86799999999994" dy="-0.6em">VOL</tspan><tspan x="296.86799999999994" dy="1.2em">UP</tspan></text>
@@ -345,12 +343,11 @@ path.combo {
 <tspan x="178.26" dy="-1.2em">DWM</tspan><tspan x="178.26" dy="1.2em">DMENU</tspan></text>
 <text x="178.26" y="872.7499071077425" class="hold">LALT</text>
 <rect rx="6.0" ry="6.0" x="209.91200000000003" y="844.5339071077425" width="55.303999999999995" height="52.0" class="key"/>
-<text x="237.56400000000002" y="870.5339071077425" class="tap">
-<tspan x="237.56400000000002" dy="-1.2em">DWM</tspan><tspan x="237.56400000000002" dy="1.2em">TERM</tspan></text>
+<text x="237.56400000000002" y="870.5339071077425" class="tap" style="font-size: 88%">
+<tspan x="237.56400000000002" dy="-1.2em">DWM</tspan><tspan x="237.56400000000002" dy="1.2em">TERMINAL</tspan></text>
 <text x="237.56400000000002" y="894.5339071077425" class="hold">LSHFT</text>
 <rect rx="6.0" ry="6.0" x="269.21599999999995" y="852.3739071077425" width="55.303999999999995" height="52.0" class="key"/>
-<text x="296.86799999999994" y="878.3739071077425" class="tap">
-<tspan x="296.86799999999994" dy="-0.6em">VOL</tspan><tspan x="296.86799999999994" dy="1.2em">DN</tspan></text>
+<text x="296.86799999999994" y="878.3739071077425" class="tap">MUTE</text>
 <rect rx="6.0" ry="6.0" x="522.784" y="852.3739071077425" width="55.303999999999995" height="52.0" class="key"/>
 <text x="550.436" y="878.3739071077425" class="tap">HOME</text>
 <rect rx="6.0" ry="6.0" x="582.088" y="844.5339071077425" width="55.303999999999995" height="52.0" class="key"/>
@@ -365,28 +362,31 @@ path.combo {
 <text x="59.652" y="964.0539071077425" class="tap" style="font-size: 78%">
 <tspan x="59.652" dy="-0.6em">DWM</tspan><tspan x="59.652" dy="1.2em">FLOAT_WIN</tspan></text>
 <rect rx="6.0" ry="6.0" x="91.30399999999999" y="898.5179071077425" width="55.303999999999995" height="52.0" class="key"/>
-<text x="118.95599999999999" y="924.5179071077425" class="tap" style="font-size: 64%">
-<tspan x="118.95599999999999" dy="-0.6em">MAC</tspan><tspan x="118.95599999999999" dy="1.2em">CTRL+OPTION</tspan></text>
+<text x="118.95599999999999" y="924.5179071077425" class="tap" style="font-size: 88%">
+<tspan x="118.95599999999999" dy="-0.6em">MAC</tspan><tspan x="118.95599999999999" dy="1.2em">CTRL+OPT</tspan></text>
 <rect rx="6.0" ry="6.0" x="150.608" y="878.7499071077425" width="55.303999999999995" height="52.0" class="key"/>
-<text x="178.26" y="904.7499071077425" class="tap" style="font-size: 88%">
-<tspan x="178.26" dy="-0.6em">MAC</tspan><tspan x="178.26" dy="1.2em">CMND+TAB</tspan></text>
+<text x="178.26" y="904.7499071077425" class="tap">
+<tspan x="178.26" dy="-1.2em">MAC</tspan><tspan x="178.26" dy="1.2em">RES_BIG</tspan></text>
+<text x="178.26" y="928.7499071077425" class="hold" style="font-size: 88%">RES_FULL</text>
 <rect rx="6.0" ry="6.0" x="209.91200000000003" y="900.5899071077425" width="55.303999999999995" height="52.0" class="key"/>
-<text x="237.56400000000002" y="926.5899071077425" class="tap">LS(INS)</text>
+<text x="237.56400000000002" y="926.5899071077425" class="tap">DEL</text>
 <rect rx="6.0" ry="6.0" x="269.21599999999995" y="908.3739071077425" width="55.303999999999995" height="52.0" class="key"/>
-<text x="296.86799999999994" y="934.3739071077425" class="tap">PP</text>
+<text x="296.86799999999994" y="934.3739071077425" class="tap">LS(INS)</text>
 <rect rx="6.0" ry="6.0" x="522.784" y="908.3739071077425" width="55.303999999999995" height="52.0" class="key"/>
 <text x="550.436" y="934.3739071077425" class="tap">
 <tspan x="550.436" dy="-0.6em">PG</tspan><tspan x="550.436" dy="1.2em">DN</tspan></text>
 <rect rx="6.0" ry="6.0" x="582.088" y="900.5899071077425" width="55.303999999999995" height="52.0" class="key"/>
-<text x="609.74" y="926.5899071077425" class="tap">DEL</text>
+<text x="609.74" y="926.5899071077425" class="tap">W</text>
 <rect rx="6.0" ry="6.0" x="641.3919999999999" y="878.7499071077425" width="55.303999999999995" height="52.0" class="key"/>
-<text x="669.044" y="904.7499071077425" class="tap">PREV</text>
+<text x="669.044" y="904.7499071077425" class="tap">
+<tspan x="669.044" dy="-0.6em">TAB</tspan><tspan x="669.044" dy="1.2em">LEFT</tspan></text>
 <rect rx="6.0" ry="6.0" x="700.696" y="898.5179071077425" width="55.303999999999995" height="52.0" class="key"/>
-<text x="728.3480000000001" y="924.5179071077425" class="tap">NEXT</text>
+<text x="728.3480000000001" y="924.5179071077425" class="tap">
+<tspan x="728.3480000000001" dy="-0.6em">TAB</tspan><tspan x="728.3480000000001" dy="1.2em">RIGHT</tspan></text>
 <rect rx="6.0" ry="6.0" x="760.0" y="938.0539071077425" width="55.303999999999995" height="52.0" class="key"/>
-<text x="787.652" y="964.0539071077425" class="tap">INS</text>
+<text x="787.652" y="964.0539071077425" class="tap">TAB</text>
 <rect rx="6.0" ry="6.0" x="190.42400000000004" y="966.3339071077426" width="55.303999999999995" height="52.0" class="key"/>
-<text x="218.07600000000002" y="992.3339071077426" class="tap">LGUI</text>
+<text x="218.07600000000002" y="992.3339071077426" class="tap">LALT</text>
 <g transform="rotate(15.0, 284.15695407686394, 1000.8386601744796)">
 <rect rx="6.0" ry="6.0" x="256.50495407686395" y="974.8386601744796" width="55.303999999999995" height="52.0" class="key"/>
 <text x="284.15695407686394" y="1000.8386601744796" class="tap">LCTRL</text>
@@ -403,7 +403,7 @@ path.combo {
 <text x="563.0344648531952" y="999.9835220494609" class="tap">LSHFT</text>
 </g>
 <rect rx="6.0" ry="6.0" x="601.5759999999999" y="966.3339071077426" width="55.303999999999995" height="52.0" class="key"/>
-<text x="629.228" y="992.3339071077426" class="tap">RALT</text>
+<text x="629.228" y="992.3339071077426" class="tap">LGUI</text>
 </g>
 <g class="layer-FUN">
 <text x="30.0" y="1091.1248606616136" class="label">FUN:</text>
@@ -434,20 +434,20 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="269.21599999999995" y="1206.7488606616137" width="55.303999999999995" height="52.0" class="key"/>
 <text x="296.86799999999994" y="1232.7488606616137" class="tap">F10</text>
 <rect rx="6.0" ry="6.0" x="522.784" y="1206.7488606616137" width="55.303999999999995" height="52.0" class="key"/>
-<text x="550.436" y="1232.7488606616137" class="tap">
-<tspan x="550.436" dy="-0.6em">BT</tspan><tspan x="550.436" dy="1.2em">0</tspan></text>
+<text x="550.436" y="1232.7488606616137" class="tap">BT</text>
+<text x="550.436" y="1256.7488606616137" class="hold">0</text>
 <rect rx="6.0" ry="6.0" x="582.088" y="1198.9088606616137" width="55.303999999999995" height="52.0" class="key"/>
-<text x="609.74" y="1224.9088606616137" class="tap">
-<tspan x="609.74" dy="-0.6em">BT</tspan><tspan x="609.74" dy="1.2em">1</tspan></text>
+<text x="609.74" y="1224.9088606616137" class="tap">BT</text>
+<text x="609.74" y="1248.9088606616137" class="hold">1</text>
 <rect rx="6.0" ry="6.0" x="641.3919999999999" y="1177.1248606616136" width="55.303999999999995" height="52.0" class="key"/>
-<text x="669.044" y="1203.1248606616136" class="tap">
-<tspan x="669.044" dy="-0.6em">BT</tspan><tspan x="669.044" dy="1.2em">2</tspan></text>
+<text x="669.044" y="1203.1248606616136" class="tap">BT</text>
+<text x="669.044" y="1227.1248606616136" class="hold">2</text>
 <rect rx="6.0" ry="6.0" x="700.696" y="1196.8928606616137" width="55.303999999999995" height="52.0" class="key"/>
-<text x="728.3480000000001" y="1222.8928606616137" class="tap">
-<tspan x="728.3480000000001" dy="-0.6em">BT</tspan><tspan x="728.3480000000001" dy="1.2em">3</tspan></text>
+<text x="728.3480000000001" y="1222.8928606616137" class="tap">BT</text>
+<text x="728.3480000000001" y="1246.8928606616137" class="hold">3</text>
 <rect rx="6.0" ry="6.0" x="760.0" y="1236.4288606616137" width="55.303999999999995" height="52.0" class="key"/>
-<text x="787.652" y="1262.4288606616137" class="tap">
-<tspan x="787.652" dy="-0.6em">BT</tspan><tspan x="787.652" dy="1.2em">4</tspan></text>
+<text x="787.652" y="1262.4288606616137" class="tap">BT</text>
+<text x="787.652" y="1286.4288606616137" class="hold">4</text>
 <rect rx="6.0" ry="6.0" x="32.0" y="1292.4288606616137" width="55.303999999999995" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="91.30399999999999" y="1252.8928606616137" width="55.303999999999995" height="52.0" class="key"/>
 <text x="118.95599999999999" y="1278.8928606616137" class="tap" style="font-size: 78%">
