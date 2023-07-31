@@ -1,6 +1,7 @@
 # zmk-config
 
 personal repo for custom ZMK configs
+
 content:
 
 + chocofi shield - derived from corne base confing with custom colemak-dh layout
