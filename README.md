@@ -1,11 +1,11 @@
 # zmk-config
 
-personal repo for custom ZMK configs
+personal repo for custom ZMK configs tailored to dwm/mac os
 
 content:
 
 + chocofi shield - derived from corne base confing with custom colemak-dh layout
-+ nice!nano & nice!view - currently up to date zmk repo
++ nice!nano & nice!view - currently up to date to zmk repo
 
 
 special thanks to:
