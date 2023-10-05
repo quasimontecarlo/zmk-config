@@ -179,9 +179,9 @@
      &kp GRAVE       &none         &inv_qm       &kp STAR      &kp AMPS          &kp SEMI      &kp N1        &kp N2        &kp N3        &kp SLASH
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                 &kp LGUI      &kp SPACE     &trans            &trans        &kp LSHFT     &kp RALT
+                                   &trans         &trans       &trans            &trans       &trans         &trans
 #else
-                                               &kp SPACE     &trans            &trans        &kp LSHFT
+                                                  &trans       &trans            &trans       &trans
 #endif
 //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
@@ -198,9 +198,9 @@
      &kp DWM_FL      &kp CT_AL  &mt MAC_FS MAC_MX &kp DEL    &kp LS(INS)        &kp PG_DN       &kp W       &kp TAB_LT    &kp TAB_RT     &kp TAB
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                                 &kp LALT      &kp LCTRL     &trans            &trans        &kp LSHFT     &kp LGUI
+                                   &trans         &trans        &trans            &trans        &trans       &trans
 #else
-                                               &kp LCTRL     &trans            &trans        &kp LSHFT
+                                                  &trans        &trans            &trans        &trans
 #endif
 //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
