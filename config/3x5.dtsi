@@ -28,9 +28,6 @@
 #define MAC_MX LC(LA(M))        // mac utility / maximize
 #define MAC_FS LC(LA(RET))      // mac utility / full screen
 #define SH_CT  LS(LCTRL)        // utility / shift + control
-#define COPY   LC(C)            // utility / ctrl + C
-#define PASTE  LC(V)            // utility / ctrl + V
-
 
 
 // Key position groups
