@@ -96,7 +96,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_SFT_R";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -106,7 +106,7 @@
 
         // Easy alt-tab with alt+backspace thumb using mod-morphs
         bstab: backspace_tab {
-            compatible = "zmk,behavior-mod-morph";
+            compatible = "zmk,behavior-mod-morph"
             label = "BSPC_TAB";
             #binding-cells = <0>;
             bindings = <&kp BSPC>, <&kp TAB>;
@@ -157,9 +157,9 @@
      &kp Z         &kp X         &kp C         &kp D           &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                               &mt SH_GU TAB &mt BSPC BSPC   &lt NAV ESC      &lt SYM RET   &mt RSHIFT SPACE &mt DEL DEL
+                               &mt SH_GU TAB &asl BSPC BSPC   &lt NAV ESC      &lt SYM RET   &asr RSHIFT SPACE &mt DEL DEL
 #else
-                                             &mt BSPC BSPC   &lt NAV ESC      &lt SYM RET   &mt RSHIFT SPACE
+                                             &asl BSPC BSPC   &lt NAV ESC      &lt SYM RET   &asr RSHIFT SPACE
 #endif
 //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
