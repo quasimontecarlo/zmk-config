@@ -106,7 +106,7 @@
 
         // Easy alt-tab with alt+backspace thumb using mod-morphs
         bstab: backspace_tab {
-            compatible = "zmk,behavior-mod-morph"
+            compatible = "zmk,behavior-mod-morph";
             label = "BSPC_TAB";
             #binding-cells = <0>;
             bindings = <&kp BSPC>, <&kp TAB>;
