@@ -157,7 +157,7 @@
      &kp Z         &kp X         &kp C         &kp D           &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
-                               &mt SH_GU TAB &asl LSHFT BSPC   &lt NAV ESC      &lt SYM RET   &asr RSHIFT SPACE &mt DEL DEL
+                               &mt SH_GU TAB &asl LSHFT BSPC   &lt NAV ESC      &lt SYM RET   &asr RSHIFT SPACE &asr RCTRL DEL
 #else
                                              &asl LSHFT BSPC   &lt NAV ESC      &lt SYM RET   &asr RSHIFT SPACE
 #endif
