@@ -171,7 +171,7 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp EXCL        &kp AT        &kp HASH      &kp DLLR      &kp PRCNT         &kp BSLH      &kp N7        &kp N8        &kp N9        &kp COMMA
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
- &aml LCTRL PLUS &aml LGUI EQUAL &aml LALT UNDER &asl LSHIFT MINUS &kp CARET     &kp N0        &kp N4        &kp N5        &kp N6        &kp DOT
+ &aml LCTRL PLUS &aml LGUI EQUAL &aml LALT UNDER &asl LSHIFT MINUS &kp CARET     &kp N0        &asr RSHFT 4 &amr RALT N5  &amr RGUI N6  &amr RCTRL DOT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp GRAVE       &none         &inv_qm       &kp STAR      &kp AMPS          &kp SEMI      &kp N1        &kp N2        &kp N3        &kp SLASH
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
@@ -188,11 +188,11 @@
             label = "NAV";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-      &kp C_PREV     &kp C_PP     &kp C_NEXT   &kp C_VOL_DN &kp C_VOL_UP        &kp PG_UP     &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT
+      &kp C_PREV     &kp C_PP     &kp C_NEXT   &kp C_VOL_DN &kp C_VOL_UP        &kp PG_UP     &kp LEFT      &kp DOWN       &kp UP        &kp RIGHT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
- &aml LCTRL DWM_FL &aml LGUI DWM_CL &aml LALT DWM_MN &asl LSHFT DWM_TE &kp C_MUTE &kp HOME      &kp H         &kp J          &kp K        &kp L
+ &aml LCTRL DWM_FL &aml LGUI DWM_CL &aml LALT DWM_MN &asl LSHFT DWM_TE &kp C_MUTE &kp HOME    &asr RSHFT H  &amr RALT J    &amr RGUI K   &amr RCTRL L
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp DWM_QT      &kp CT_AL  &mt MAC_FS MAC_MX &kp DEL    &kp LS(INS)        &kp PG_DN       &kp W       &kp TAB_LT    &kp TAB_RT     &kp TAB
+     &kp DWM_QT      &kp CT_AL  &mt MAC_FS MAC_MX &kp DEL    &kp LS(INS)        &kp PG_DN     &kp W         &kp TAB_LT     &kp TAB_RT    &kp TAB
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
                                    &trans         &trans        &trans            &trans        &trans       &trans
