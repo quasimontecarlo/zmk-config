@@ -171,7 +171,7 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &kp EXCL        &kp AT        &kp HASH      &kp DLLR      &kp PRCNT         &kp BSLH      &kp N7        &kp N8        &kp N9        &kp COMMA
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
- &aml LCTRL PLUS &aml LGUI EQUAL &aml LALT UNDER &asl LSHIFT MINUS &kp CARET     &kp N0        &asr RSHFT 4 &amr RALT N5  &amr RGUI N6  &amr RCTRL DOT
+ &aml LCTRL PLUS &aml LGUI EQUAL &aml LALT UNDER &asl LSHIFT MINUS &kp CARET     &kp N0        &asr RSHFT N4 &amr RALT N5  &amr RGUI N6  &amr RCTRL DOT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp GRAVE       &none         &inv_qm       &kp STAR      &kp AMPS          &kp SEMI      &kp N1        &kp N2        &kp N3        &kp SLASH
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
