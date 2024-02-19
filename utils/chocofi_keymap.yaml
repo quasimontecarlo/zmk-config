@@ -1,9 +1,6 @@
-# FILL IN below field with a value like {qmk_keyboard: ferris/sweep}
-# or {ortho_layout: {split: true, rows: 3, columns: 5, thumbs: 2}}
-# see https://github.com/caksoylar/keymap-drawer/blob/main/KEYMAP_SPEC.md#layout
-layout: {qmk_keyboard: chocofi}
+layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x5_3}
 layers:
-  DEF:
+  default:
   - [Q, W, F]
   - [P, B, J]
   - [L, U, Y]
@@ -22,13 +19,13 @@ layers:
   - [X, C, D]
   - [V, K, H]
   - [',', ., /]
-  - - {t: TAB, h: LS(LGUI)}
-    - {t: BSPC, h: BSPC}
-    - {t: ESC, h: NAV}
-  - - {t: RET, h: SYM}
+  - - {t: TAB, h: LSHFT+LGUI}
+    - {t: BSPC, h: LSHFT}
+    - {t: ESC, h: nav}
+  - - {t: RET, h: sym}
     - {t: SPACE, h: RSHIFT}
-    - {t: DEL, h: RALT}
-  SYM:
+    - {t: DEL, h: RCTRL}
+  symbol:
   - ['!', '@', '#']
   - [$, '%', \]
   - ['7', '8', '9']
@@ -38,41 +35,49 @@ layers:
   - - {t: _, h: LALT}
     - {t: '-', h: LSHIFT}
     - ^
-  - ['0', '4', '5']
-  - ['6', ., '`']
+  - - '0'
+    - {t: '4', h: RSHFT}
+    - {t: '5', h: RALT}
+  - - {t: '6', h: RGUI}
+    - {t: ., h: RCTRL}
+    - '`'
   - ['', '¿', '*']
   - ['&', ;, '1']
   - ['2', '3', /]
-  - - LGUI
-    - SPACE
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {type: held}
-    - LSHFT
-    - RALT
-  NAV:
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  nav:
   - [PREV, PP, NEXT]
   - [VOL DN, VOL UP, PG UP]
   - [LEFT, DOWN, UP]
   - - RIGHT
-    - {t: DWM QUIT, h: LCTRL}
-    - {t: DWM CLOSE, h: LGUI}
-  - - {t: DWM DMENU, h: LALT}
-    - {t: DWM TERMINAL, h: LSHFT}
+    - {t: DWM_FLOAT, h: LCTRL}
+    - {t: DWM_CLOSE, h: LGUI}
+  - - {t: DWM_DMENU, h: LALT}
+    - {t: DWM_TERM, h: LSHFT}
     - MUTE
-  - [HOME, H, J]
-  - [K, L, DWM FLOAT_WIN]
-  - - MAC CTRL+OPT
-    - {t: MAC RES_BIG, h: RES_FULL}
+  - - HOME
+    - {t: H, h: RSHFT}
+    - {t: J, h: RALT}
+  - - {t: K, h: RGUI}
+    - {t: L, h: RCTRL}
+    - DWM_QUIT
+  - - MAC LCTRL+LGUI
+    - {t: MAC_MAX, h: MAC_FULL}
     - DEL
   - [LS(INS), PG DN, W]
-  - [TAB LEFT, TAB RIGHT, TAB]
-  - - LALT
-    - LCTRL
+  - [TAB_LT, TAB_RT, TAB]
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {type: held}
   - - {t: ▽, type: trans}
-    - LSHFT
-    - LGUI
-  FUN:
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  function:
   - [F1, F2, F3]
   - [F4, F5, CAPS]
   - ['', '', '']
@@ -84,7 +89,7 @@ layers:
   - - {t: BT, h: '3'}
     - {t: BT, h: '4'}
     - ''
-  - [WIN DESK_LEFT, WIN DESK_RIGHT, F11]
+  - [D_LT, D_RT, F11]
   - [F12, OUT USB, OUT BLE]
   - [PSCRN, PAUSE BREAK, BT CLR]
   - - '&bootloader'
@@ -96,37 +101,37 @@ layers:
 combos:
 - p: [6, 7]
   k: ;
-  l: [DEF]
+  l: [default]
 - p: [12, 13]
   k: (
-  l: [DEF]
+  l: [default]
 - p: [16, 17]
   k: )
-  l: [DEF]
+  l: [default]
 - p: [11, 12]
   k: '['
-  l: [DEF]
+  l: [default]
 - p: [17, 18]
   k: ']'
-  l: [DEF]
+  l: [default]
 - p: [11, 13]
   k: TAB
-  l: [DEF]
+  l: [default]
 - p: [16, 18]
   k: BSPC
-  l: [DEF]
+  l: [default]
 - p: [22, 23]
   k: '`'
-  l: [DEF]
+  l: [default]
 - p: [21, 22]
   k: '~'
-  l: [DEF]
+  l: [default]
 - p: [26, 27]
   k: \
-  l: [DEF]
+  l: [default]
 - p: [27, 28]
   k: '|'
-  l: [DEF]
+  l: [default]
 - p: [13, 16]
-  k: '&caps_word'
-  l: [DEF]
+  k: 'ALLCAPS'
+  l: [default]
