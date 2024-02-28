@@ -8,6 +8,7 @@ manifest:
     - name: zmk
       remote: quasimontecarlo
       revision: main
+      import: app/west.yml
     #- name: zmk
     #  remote: zmkfirmware
     #  revision: main
