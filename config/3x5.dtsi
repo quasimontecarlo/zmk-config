@@ -28,7 +28,7 @@
 #define MAC_MX LC(LA(M))        // mac utility / maximize
 #define MAC_FS LC(LA(RET))      // mac utility / full screen
 #define SH_CT  LS(LCTRL)        // utility / shift + control
-
+#define ALT_A  LA(A)            // utility / tmux corporate linux
 
 // Key position groups
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24
@@ -192,7 +192,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
  &aml LCTRL DWM_FL &aml LGUI DWM_CL &aml LALT DWM_MN &asl LSHFT DWM_TE &kp C_MUTE &kp HOME    &asr RSHFT H  &amr RALT J    &amr RGUI K   &amr RCTRL L
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp DWM_QT      &kp CT_AL  &mt MAC_FS MAC_MX &kp DEL    &kp LS(INS)        &kp PG_DN     &kp W         &kp TAB_LT     &kp TAB_RT    &kp TAB
+     &kp DWM_QT    &aml ALT_A CT_AL &mt MAC_FS MAC_MX &kp DEL &kp LS(INS)        &kp PG_DN     &kp W         &kp TAB_LT     &kp TAB_RT    &kp TAB
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 #ifdef THREE_THUMBS
                                    &trans         &trans        &trans            &trans        &trans       &trans
