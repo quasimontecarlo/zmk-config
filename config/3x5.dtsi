@@ -61,7 +61,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_MT_L";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -73,8 +73,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_SFT_L";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <200>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
@@ -84,7 +84,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_MT_R";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -96,8 +96,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_SFT_R";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <200>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
