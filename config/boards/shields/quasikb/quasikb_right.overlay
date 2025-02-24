@@ -9,3 +9,11 @@
 &five_column_transform {
     col-offset = <15>;
 };
+
+&kscan0 {
+    col-gpios
+        = <&gpio1 1 GPIO_ACTIVE_HIGH>
+        , <&gpio1 2 GPIO_ACTIVE_HIGH>
+        , <&gpio1 7 GPIO_ACTIVE_HIGH>
+        ;
+};
