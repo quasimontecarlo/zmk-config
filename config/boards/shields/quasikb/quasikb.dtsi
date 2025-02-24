@@ -9,7 +9,7 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk, matrix_tranform = &defualt_tranform;
+        zmk, matrix_tranform = &default_tranform;
     };
            
     default_transform: keymap_transform_0 {
