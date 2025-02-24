@@ -9,10 +9,10 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_tranform = &default_tranform;
+        zmk,matrix_tranform = &five_column_transform;
     };
 
-    default_transform: keymap_transform_0 {
+    five_column_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <36>;
         rows = <1>;
