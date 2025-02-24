@@ -1,0 +1,11 @@
+/*
+ * Copyright (c) 2020 Pete Johanson
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "quasikb.dtsi"
+
+&default_transform {
+    col-offset = <19>;
+};

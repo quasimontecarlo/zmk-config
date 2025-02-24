@@ -1,0 +1,8 @@
+# Copyright (c) 2020 Pete Johanson
+# SPDX-License-Identifier: MIT
+
+config SHIELD_QUASIKB_LEFT
+    def_bool $(shields_list_contains,quasikb_left)
+
+config SHIELD_QUASIKB_RIGHT
+    def_bool $(shields_list_contains,quasikb_right)

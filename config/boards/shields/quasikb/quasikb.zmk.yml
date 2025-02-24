@@ -1,0 +1,11 @@
+file_format: "1"
+id: quasikb
+name: quasikb
+type: shield
+url: https://github.com/quasimontecarlo/quasikb
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - quasikb_left
+  - quasikb_right
