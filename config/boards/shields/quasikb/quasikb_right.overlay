@@ -7,5 +7,5 @@
 #include "quasikb.dtsi"
 
 &five_column_transform {
-    col-offset = <15>;
+    col-offset = <18>;
 };
