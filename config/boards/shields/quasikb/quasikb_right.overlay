@@ -6,10 +6,6 @@
 
 #include "quasikb.dtsi"
 
-&five_column_transform {
-    col-offset = <18>;
-};
-
 &kscan0 {
         input-gpios
 		= <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
