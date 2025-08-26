@@ -190,7 +190,7 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
       &kp C_PREV     &kp C_PP     &kp C_NEXT   &kp C_VOL_DN &kp C_VOL_UP        &kp PG_UP     &kp LEFT      &kp DOWN       &kp UP        &kp RIGHT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
- &aml LCTRL DWM_FL &aml LGUI DWM_CL &aml LALT DWM_MN &asl LSHFT DWM_TE &kp C_MUTE &kp HOME    &asr RSHFT H  &amr RALT J    &amr RGUI K   &amr RCTRL L
+ &aml LCTRL DWM_FL &aml LGUI DWM_CL &aml LALT DWM_MN &asl LSHFT DWM_TE &kp C_MUTE &kp HOME    &kp H         &kp J          &kp K         &kp L
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &kp DWM_QT    &mt ALT_A CT_AL &mt MAC_FS MAC_MX &kp DEL &kp LS(INS)        &kp PG_DN     &kp W         &kp TAB_LT     &kp TAB_RT    &kp TAB
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
